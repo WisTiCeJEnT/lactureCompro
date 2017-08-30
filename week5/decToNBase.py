@@ -10,4 +10,4 @@ def decton(num,n):
         return decton(num//n,n) + basedic(num%n)
 num = int(input("Convert : "))
 n = int(input("To base : "))
-print(decton(num,n))
+print("{} in base {} = {}".format(num,n,decton(num,n)))
