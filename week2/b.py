@@ -1,0 +1,12 @@
+print(not('A'=='a' or 1-0==0))
+print(1>2 or 'b'+'a'=="ba")
+print("you"!="me" and "I"!="him")
+print(not("about"=="you") and "me"!="anymore")
+print(not("Because"=="of him" or "I" == "it's because of you"))
+
+print("========================")
+print("it's"=="now" or "never"=="...")
+print("It's start with"[0]=='I' and "End with"[1]=="U")
+print(not(3>2 and 2<3) and not(4>=5 or 5<=4))
+print(int(1)!=str(1) and bool(0))
+print("Am I" in "CPE31 class?")
