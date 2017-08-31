@@ -7,7 +7,8 @@ for i in range(2,n+1):
 while(ls):
     tmp = ls[0]
     pls.append(ls.pop(0))
-    for i in ls:
-        if(i%tmp==0):
-            ls.remove(i)
+    if(tmp*tmp<=n):
+        for i in ls:
+            if(i%tmp==0):
+                ls.remove(i)
 print(pls)
