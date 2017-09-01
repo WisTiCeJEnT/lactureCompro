@@ -1,4 +1,4 @@
-n = int(input())
+n = int(input())    #input n>=2
 pls = []
 ls = []
 ans = 0
@@ -10,5 +10,8 @@ while(ls):
     if(tmp*tmp<=n):
         for i in ls:
             if(i%tmp==0):
-                ls.remove(i)
+                 ls.remove(i)
+    else:
+        pls.extend(ls)
+        break
 print(pls)
