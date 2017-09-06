@@ -3,18 +3,23 @@ def conv(n):
     return dic[n]
 
 n = input()
-dit = {1:"",0:"" ,2:"ty" , 3:"hundred" , 4:"thousand"}
-i = len(n)+1
+dit = {-1:"",0:"" ,1:"ty" , 2:"hundred" , 3:"thousand" , 6:"million"}
+exl = {2,3,5}
+exdit = {2:"twenty",3:"thirty",5:"fifty"}
+i = len(n)
 first = True
 ans = ''
 for c in n:
     j = i
     if not first:
-        if((j-1)%3!=0):
-            j = j%3
-        ans = ans + dit[j]
+        if(j%3!=0):
+            j = (j)%3
+        if(c in exl):
+            ans = ans + exdit[c]
+        else:
+            ans = ans + dit[j]
         print(j)
-    ans = ans + conv(c)
+    ans = ans + " " + conv(c)
     i-=1
     first = False
 print(ans)
