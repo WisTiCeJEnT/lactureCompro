@@ -37,6 +37,7 @@ def hund(hh):
 dit = {3:"thousand", 6:"million", 9:"billion"}
 inp = input()
 ans = ""
+intAns = ""
 D = 0
 while inp:
     D += 3
@@ -48,7 +49,9 @@ while inp:
         inp = ""
     ans = hund(h) + ans
     if inp:
-        ans = dit[D] + ans
+        ans = dit[D] + " " + ans
+    intAns = h + "," + intAns
+print(intAns[0:len(intAns)-1])
 print(ans)
 """
 n = input()
