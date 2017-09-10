@@ -33,8 +33,10 @@ def hund(hh):
         hh = 0
     hans = hans + conv(hh)
     return hans
-    
-dit = {3:"thousand", 6:"million", 9:"billion"}
+
+#dit call by 10^n
+dit = { 3:"thousand", 6:"million", 9:"billion", 12:"trillion", 
+        15:"quadrillion", 18:"quintillion", 21:"sextillion", 24:"septillion",       27:"octillion", 30:"nonillion", 33:"decillion"}
 inp = str(int(input()))     #For convert 0010 -> 10
 ans = ""
 intAns = ""
@@ -55,26 +57,3 @@ while inp:
     intAns = h + "," + intAns
 print(intAns[0:len(intAns)-1])
 print(ans)
-"""
-n = input()
-exl = {2,3,5}
-i = len(n)
-first = True
-ans = ''
-for c in n:
-    j = i
-    if not first:
-        if(j%3!=0):
-            j = (j)%3
-            if(int(c) in exl and j==1):
-                ans = ans + exdit[j]
-            else:
-                ans = ans + dit[j]
-        else:
-            ans = ans + dit[j]
-        print(j)
-    ans = ans + " " + conv(c)
-    i-=1
-    first = False
-print(ans)
-"""
