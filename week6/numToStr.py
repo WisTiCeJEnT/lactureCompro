@@ -39,6 +39,8 @@ inp = str(int(input()))     #For convert 0010 -> 10
 ans = ""
 intAns = ""
 D = 0
+if inp == "0":
+    ans = "Just Zero"
 while inp:
     D += 3
     if(len(inp)>=3):
