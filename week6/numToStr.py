@@ -35,7 +35,7 @@ def hund(hh):
     return hans
     
 dit = {3:"thousand", 6:"million", 9:"billion"}
-inp = input()
+inp = str(int(input()))     #For convert 0010 -> 10
 ans = ""
 intAns = ""
 D = 0
