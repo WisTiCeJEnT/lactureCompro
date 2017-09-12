@@ -36,7 +36,8 @@ def hund(hh):
 
 #dit call by 10^n
 dit = { 3:"Thousand", 6:"Million", 9:"Billion", 12:"Trillion", 
-        15:"Quadrillion", 18:"Quintillion", 21:"Sextillion", 24:"Septillion",       27:"Octillion", 30:"Nonillion", 33:"Decillion"}
+        15:"Quadrillion", 18:"Quintillion", 21:"Sextillion", 24:"Septillion",       27:"Octillion", 30:"Nonillion", 33:"Decillion", 36:"Undecillion",
+        39:"Duodecillion"}
 inp = str(int(input()))     #For convert 0010 -> 10
 ans = ""
 intAns = ""
