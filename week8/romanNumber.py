@@ -2,17 +2,16 @@ dic = {1:'I' , 5:'V' , 10:'X' , 50:'L' , 100:'C' , 500:'D' , 1000:'M'}
 n = int(input())
 ans = ""
 while n>0:
-    d = len(str(n))-1
-    c = n//(10**d)
+    d = len(str(n))-1       #Digit-1 use for 10^d
+    c = n//(10**d)          #current digit
     n = n%(10**d)
-
     if c%5==4:  #4 or 9
-        ans += dic[10**d]
+        ans += dic[10**d]   
         c += 1
-        n += c*(10**d)
+        n += c*(10**d)      
         continue
     while c>0:
-        if c>=5:
+        if c>=5:            #V,D
             ans += dic[5*10**d]
             c -= 5
         else:
