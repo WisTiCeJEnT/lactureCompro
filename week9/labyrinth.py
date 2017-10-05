@@ -5,21 +5,26 @@ def printTbl():
     for i in tbl:
         print(i)
 def find(x,y,path):
-    if tbl[x][y] == 'e':
-        print(path)
+    #if tbl[x][y] == 'e':
+    print(path)
     tbl[x][y] = '*'
-    if x>0 and tbl[x-1][y] == ' ':
-        find(x-1,y,path+'L')
-    if y>0 and tbl[x][y-1] == ' ':
-        find(x,y-1,path+'U')
-    if x<len(tbl[0]) and tbl[x-1][y] == ' ':
-        find(x+1,y,path+'R')
-    if y<l and tbl[x-1][y] == ' ':
-        find(x,y+1,path+'D')
+    if x>0:
+        if tbl[x-1][y] == ' ':
+            find(x-1,y,path+'U')
+    if y>0:
+        if tbl[x][y-1] == ' ':
+            find(x,y-1,path+'L')
+    if x<l-1:
+        if tbl[x+1][y] == ' ':
+            find(x+1,y,path+'D')
+    if y<len(tbl[0])-1:
+        if tbl[x][y+1] == ' ':
+            find(x,y+1,path+'R')
 tbl = []
 l = int(input("How many line : "))
 for i in range(l):
     tbl.append(list(input()))
 printTbl()
 find(0,0,"")
+print()
 printTbl()
