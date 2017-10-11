@@ -7,6 +7,7 @@ def printTbl():
 def find(x,y,path):
     #if tbl[x][y] == 'e':
     print(path)
+    global tbl
     tbl[x][y] = '*'
     if x>0:
         if tbl[x-1][y] == ' ':
