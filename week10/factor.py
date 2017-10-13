@@ -12,6 +12,7 @@ def plist(n):
     return pls          #return list of prime
 inp = int(input("Enter a positive integer greater than 1: "))
 if inp>1:
+    print("Prime factorization of {} is:".format(inp))
     for i in plist(inp):
         while inp%i == 0:
             print(i)
