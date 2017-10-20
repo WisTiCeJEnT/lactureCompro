@@ -1,21 +1,20 @@
-def plist(n):
-    pls = []
-    n += 1
-    ls = list(range(n))
-    for i in range(2,int(n**0.5)+1):
-        if ls[i]:
-            for dele in range(i+i,n,i):
-                ls[dele] = False
-    for i in range(2,n):
-        if ls[i]:
-            pls.append(i)
-    return pls          #return list of prime
 inp = int(input("Enter a positive integer greater than 1: "))
 if inp>1:
     print("Prime factorization of {} is:".format(inp))
-    for i in plist(inp):
-        while inp%i == 0:
+    i = 2
+    b = False
+    while inp>1:
+        while inp%i!=0 and i<=inp:
+            i += 1
+            if i*i>inp:
+                b = True
+                break
+#            print("try",i)
+        if not b:
             print(i)
             inp = inp/i
+        else:
+            print(int(inp))
+            break
 else:
     print("Input must be greater than 1")
