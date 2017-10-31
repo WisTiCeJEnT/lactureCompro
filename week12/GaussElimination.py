@@ -15,7 +15,7 @@ def forwardE(mat):
     for i in range(1,l):
         tmp = mat[i-1][i-1]
         tmp2 = mat[i-1][i]
-        for j in range(i,l):
+        for j in range(len(mat[0])):
             mat[i][j] = mat[i][j] - mat[i-1][j]*tmp2/tmp
     return mat        
 
