@@ -14,7 +14,7 @@ def forwardE(mat):
     l = len(mat)
     for i in range(1,l):
         tmp = mat[i-1][i-1]
-        tmp2 = mat[i-1][i]
+        tmp2 = mat[i][i-1]
         for j in range(len(mat[0])):
             mat[i][j] = mat[i][j] - mat[i-1][j]*tmp2/tmp
     return mat        
@@ -23,4 +23,5 @@ n = int(input())
 m = int(input())
 lis = inputlis()
 lis = forwardE(lis)
+print()
 printlis(lis)
