@@ -4,7 +4,7 @@ while True:
         den = int(input('Input the denomerator: ')) 
         print('%d//%d = %d'%(num, den, num//den))
     except Exception as e:
-        print('Exception occurs: ' + e) 
+        print(type(e)) 
         print('Try next input..')
     else:
         print('Very good, next input..')
