@@ -10,13 +10,21 @@ def inputlis():
         tmplis.append(list(map(int,input().split())))
     return tmplis
     
+def set0(r1,r2,s):
+    for i in range(len(r1)):
+        r2[i] = r2[i]*
 def forwardE(mat):
-    l = len(mat)
-    for i in range(1,l):
-        tmp = mat[i-1][i-1]
-        tmp2 = mat[i][i-1]
-        for j in range(len(mat[0])):
-            mat[i][j] = mat[i][j] - mat[i-1][j]*tmp2/tmp
+    #set to 0 in row
+    for i in range(m-1):
+        t1 = mat[i][i]
+        printlis(mat)
+        #run the row
+        for j in range(i+1,n):
+            t2 = mat[j][i]
+            #do in row
+            for k in range(i,m):
+                mat[j][k] = mat[j][k] - mat[j][k]*t1/t2
+            
     return mat        
 
 n = int(input())
