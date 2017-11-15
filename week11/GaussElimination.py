@@ -1,6 +1,10 @@
 def printlis(tbl):
     for line in tbl:
+        count = 0
         for _ in line:
+            count += 1
+            if count == m:
+                print('|',end=' ')
             print(_,end=' ')
         print()
 
