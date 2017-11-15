@@ -11,11 +11,11 @@ def inputlis():
     return tmplis
     
 def forwardE(mat):
-    for j in range(1,n):
-        k = mat[j][0]/mat[0][0]
-        for i in range(m):
-            #mat[j][i] = mat[j][i]*k - mat[0][i]
-            mat[j][i] = mat[j][i] - mat[0][i]*k
+    for k in range(n):
+        for j in range(k+1,n):
+            c = mat[j][k]/mat[k][k]
+            for i in range(m):
+                mat[j][i] = mat[j][i] - mat[k][i]*c
     return mat        
 
 n = int(input())
