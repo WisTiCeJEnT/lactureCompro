@@ -16,6 +16,7 @@ def inputlis():
     
 def forwardE(mat):
     for k in range(n):
+        #printlis(mat)
         mat = mat[0:k] + pivoting(mat[k:len(mat)],k)
         for j in range(k+1,n):
             c = mat[j][k]/mat[k][k]
