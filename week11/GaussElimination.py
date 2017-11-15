@@ -35,8 +35,9 @@ def getX(mat):
         mat[i][m-1] /= mat[i][i]
         mat[i][i] = 1
     return mat
+
 n = int(input())
-m = int(input())
+m = n+1
 lis = inputlis()
 lis = forwardE(lis)
 lis = backwardE(lis)
