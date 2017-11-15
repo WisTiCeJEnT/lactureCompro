@@ -36,6 +36,9 @@ def getX(mat):
         mat[i][i] = 1
     return mat
 
+def printX(mat):
+    for i in range(n):
+        print("X{} = {:.5f}".format(i+1,mat[i][m-1]))
 n = int(input())
 m = n+1
 lis = inputlis()
@@ -44,3 +47,4 @@ lis = backwardE(lis)
 lis = getX(lis)
 print()
 printlis(lis)
+printX(lis)
